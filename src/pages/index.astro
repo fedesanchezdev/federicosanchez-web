@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import HeroSection from "../components/HeroSection.astro";
+import PlanesSection from "../components/PlanesSection.astro";
+import BioSection from "../components/BioSection.astro";
+import FaqSection from "../components/FaqSection.astro";
+import ContactoSection from "../components/ContactoSection.astro";
+import FooterSection from "../components/FooterSection.astro";
+---
+
+<Layout title="Clases de Violoncello | Federico Sánchez">
+  <header
+    class="py-3 px-6 flex items-center fixed top-0 w-full justify-between z-40 text-white bg-black/50 backdrop-blur-sm"
+  >
+    <Navigation />
+  </header>
+
+  <main class="snap-y snap-mandatory relative w-full overflow-hidden">
+    <div class="snap-center">
+      <HeroSection />
+    </div>
+
+    <div class="snap-center">
+      <PlanesSection />
+    </div>
+
+    <div class="snap-center">
+      <BioSection />
+    </div>
+
+    <div class="snap-center">
+      <FaqSection />
+    </div>
+
+    <div class="snap-center">
+      <ContactoSection />
+    </div>
+
+    <div class="snap-center">
+      <FooterSection />
+    </div>
+  </main>
+</Layout>
+
+<script>
+  var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
+  var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
+
+  // Change the icons inside the button based on previous settings
+  if (
+    localStorage.getItem("color-theme") === "dark" ||
+    (!("color-theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    themeToggleLightIcon.classList.remove("hidden");
+  } else {
+    themeToggleDarkIcon.classList.remove("hidden");
+  }
+
+  var themeToggleBtn = document.getElementById("theme-toggle");
+
+  themeToggleBtn.addEventListener("click", function () {
+    // toggle icons inside button
+    themeToggleDarkIcon.classList.toggle("hidden");
+    themeToggleLightIcon.classList.toggle("hidden");
+
+    // if set via local storage previously
+    if (localStorage.getItem("color-theme")) {
+      if (localStorage.getItem("color-theme") === "light") {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("color-theme", "dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("color-theme", "light");
+      }
+
+      // if NOT set via local storage previously
+    } else {
+      if (document.documentElement.classList.contains("dark")) {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("color-theme", "light");
+      } else {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("color-theme", "dark");
+      }
+    }
+  });
+</script>

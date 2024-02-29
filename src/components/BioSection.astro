@@ -1,0 +1,155 @@
+---
+import { Image } from "astro:assets";
+import imgFede from "../assets/fede3.webp";
+---
+
+<section
+  class="grid grid-cols-1 md:grid-cols-3 px-4 md:px-6 lg:px-14 xl:px-48 py-16 md:py-20 lg:py-24 xl:py-28 bg-white text-left m-auto overflow-hidden w-screen gap-4
+  dark:bg-blue-900"
+  id="bio"
+>
+  <div class="mx-auto">
+    <Image
+      src={imgFede}
+      class="w-full h-full max-w-96 max-h-[478px] aspect-w-8 aspect-h-10 object-cover object-center rounded-md"
+      alt="foto de Federico"
+    />
+  </div>
+
+  <div class="col-span-2 mx-auto px-6">
+    <h2
+      class="md:mb-6 lg:mb-8 xl:mb-10 text-gray-950 dark:text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-left my-3"
+    >
+      Bio | Federico Sánchez
+    </h2>
+
+    <p
+      class="mb-3 text-base md:text-xl lg:text-2xl xl:text-3xl text-slate-600 dark:text-gray-300"
+    >
+      Me gradué como <span class="font-semibold"
+        >Profesor Nacional de Música</span
+      >, en el <span class="italic"
+        >Conservatorio Nacional de Música "Carlos López Buchardo"</span
+      >.
+    </p>
+    <p
+      class="mb-3 text-base md:text-xl lg:text-2xl xl:text-3xl text-slate-600 dark:text-gray-300"
+    >
+      Realicé estudios superiores de <span class="font-semibold"
+        >Dirección Orquestal,</span
+      > en el <span class="italic"
+        >Conservatorio Superior de Música "Manuel de Falla"</span
+      >.
+    </p>
+
+    <button
+      data-modal-target="default-modal"
+      data-modal-toggle="default-modal"
+      class="block text-blue-800 dark:text-blue-400 hover:text-blue-500 font-medium rounded-lg text-lg md:text-xl lg:text-2xl xl:text-3xl px-5 py-2.5 text-center"
+      type="button"
+    >
+      +info
+    </button>
+
+    <div
+      id="default-modal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    >
+      <div class="relative p-4 w-full max-w-2xl max-h-full">
+        <div class="relative bg-white dark:bg-blue-900 rounded-lg shadow">
+          <div
+            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t"
+          >
+            <button
+              type="button"
+              class="text-gray-800 dark:text-white bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+              data-modal-hide="default-modal"
+            >
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <div class="p-4 md:p-5 space-y-4 dark:bg-blue-900">
+            <div
+              class="text-base leading-relaxed text-gray-700 dark:text-gray-300"
+            >
+              <p class="mb-3">
+                Nací en Lincoln, provincia de Buenos Aires, donde comencé mis
+                estudios musicales.
+              </p>
+
+              <p class="mb-3">
+                Como violoncellista integré la Orquesta Sinfónica de la Radio y
+                Televisión Pública de Argentina y la Orquesta Institucional del
+                Conservatorio de Música Manuel de Falla como profesor auxiliar
+                de Violoncello.
+              </p>
+
+              <p class="mb-3">
+                Como Director de Orquesta creé y dirigí la Orquesta de Cámara
+                Vocacional, el Ensamble 21 (orquesta de cámara) y el Ensamble
+                Sinfónico 21 (orquesta sinfónica). En el año 2017, como
+                director, junto al Ensamble Sinfónico 21 nos presentamos en dos
+                oportunidades en el Teatro Colón de la Ciudad de Buenos Aires.
+              </p>
+              <p>
+                Participé de diversos espectáculos musicales y orquestas de
+                Buenos Aires, entre ellas:
+              </p>
+              <ul>
+                <li>
+                  -Orquesta Sinfónica de la Radio y Televisión Pública de
+                  Argentina
+                </li>
+                <li>-Orquesta Académica del Teatro Colón</li>
+                <li>
+                  -Quinteto de Cuerdas de la Orquesta Académica del Teatro Colón
+                </li>
+                <li>
+                  -Orquesta Sinfónica del Conservatorio Superior de Música
+                  "Manuel de Falla"
+                </li>
+                <li>-Orquesta del Museo Nacional de Bellas Artes</li>
+                <li>-Orquesta Sinfónica Bridas</li>
+                <li>-Orquesta Sinfónica de Jóvenes "Pan American Energy"</li>
+                <li>-Orquesta Sinfónica juvenil "Libertador San Martín"</li>
+                <li>-Orquesta de Cámara de Morón</li>
+                <li>-Sinfonietta Maquinchao</li>
+                <li>-Orquesta H. Panizza de la Facultad de Medicina</li>
+                <li>-Orquesta de cámara "Música Concertante"</li>
+                <li>-Orquesta de la Asociación Festivales de Ópera</li>
+                <li>-Orquesta Escuela de Tango "Emilio Balcarce"</li>
+                <li>-Compañía de "Señor Tango" (en giras internacionales)</li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b"
+          >
+            <button
+              data-modal-hide="default-modal"
+              type="button"
+              class="text-gray-500 dark:text-white font-medium hover:text-blue-900 text-md px-5 py-2.5 text-center"
+              >Cerrar</button
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

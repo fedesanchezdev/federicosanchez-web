@@ -1,0 +1,56 @@
+---
+import Contador from "./Contador.astro";
+---
+
+<section class="h-full bg-indigo-100 dark:bg-blue-900 flex flex-col">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+    <div
+      class="grid grid-col-1 justify-center mx-auto [&>p]:text-xs [&>p]:sm:text-base [&>p]:md:text-lg [&>p]:lg:text-xl [&>p]:xl:text-2xl"
+    >
+      <h1
+        class="mt-20 mb-6 text-3xl font-extrabold leading-none text-slate-700 md:text-5xl lg:text-6xl dark:text-white"
+      >
+        Clases de Violoncello
+      </h1>
+
+      <p
+        class="flex flex-grow mx-auto sm:px-16 xl:px-48 mb-8 w-11/12 text-center font-normal text-slate-700 dark:text-gray-400"
+      >
+        Las clases son individuales y están destinadas a aquellos que quieran
+        perfeccionarse o comenzar desde cero.
+      </p>
+    </div>
+  </div>
+
+  <Contador />
+
+  <div
+    class="mt-16 mb-28 mx-auto inline-flex rounded-md shadow-sm
+    [&>a]:text-xs [&>a]:sm:text-base [&>a]:md:text-lg [&>a]:lg:text-xl [&>a]:xl:text-2xl
+    [&>a]:px-3 [&>a]:py-1 [&>a]:sm:px-4 [&>a]:sm:py-2 [&>a]:md:px-5 [&>a]:md:py-3 [&>a]:lg:px-10 [&>a]:lg:py-4
+    [&>a]:font-medium [&>a]:text-gray-900 [&>a]:bg-transparent [&>a]:border-gray-900"
+    role="group"
+  >
+    <a
+      href="/#planes"
+      class="border rounded-s-lg hover:bg-gray-900 hover:text-white dark:border-gray-500 dark:text-white dark:hover:text-gray-300 dark:focus:bg-gray-700"
+    >
+      Ver Planes
+    </a>
+
+    <a
+      href="/#contacto"
+      class="border-t border-b hover:bg-gray-900 hover:text-white dark:border-gray-500 dark:text-white dark:hover:text-gray-300 dark:focus:bg-gray-700"
+    >
+      Contactar
+    </a>
+
+    <a
+      href="https://us04web.zoom.us/j/4387764309?pwd=ekVqeTBtUWp1U0hwdVNyU1J3a1NaQT09"
+      target="_blank"
+      class="border rounded-e-lg hover:bg-gray-900 hover:text-white dark:border-gray-500 dark:text-white dark:hover:text-gray-300 dark:focus:bg-gray-700"
+    >
+      Clase (Zoom)
+    </a>
+  </div>
+</section>

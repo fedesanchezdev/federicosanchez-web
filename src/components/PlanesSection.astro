@@ -1,0 +1,57 @@
+---
+import CardPlanes from "./CardPlanes.astro";
+---
+
+<section class="bg-gray-900 pt-9" id="planes">
+  <div class="py-8 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+      <h2 class="px-3 mb-4 text-xl tracking-tight font-bold text-white">
+        Comenzá en marzo de 2024 y obtené los siguientes descuentos:
+      </h2>
+      <p class="px-3 mb-5 font-normal text-sm sm:text-xl text-gray-400">
+        Debido a la alta inflación los precios se actualizan todos los meses.<br
+        />
+        Una vez que comiences con las clases de violoncello, tu plan se actualizará
+        bimestralmente.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-4">
+      <CardPlanes
+        clases="1 clase"
+        descripcion="Si ya tocás el Violoncello, tu primera clase es completamente gratis"
+        precioSinDesc="12.000"
+        precioConDesc="0"
+        plan="1era clase"
+        objetivos="Evaluación y Recomendaciones técnicas"
+        tildeOpcionalUno={false}
+        tildeOpcionalDos={false}
+        mensaje="https://wa.me/5491141631300?text=Hola,%20ya%20toco%20el%20violoncello%20y%20quiero%20hacer%20una%20clase%20de%20prueba.%20Me%20gustaría%20que%20me%20llames%20y%20conversar%20sobre%20las%20clases.%20¡Gracias!%20Mi%20nombre%20es:"
+      />
+
+      <CardPlanes
+        clases="1 clase"
+        descripcion="Si comenzás desde cero, probá una clase con el 50% de descuento"
+        precioSinDesc="12.000"
+        precioConDesc="6000"
+        plan="1era clase"
+        objetivos="Evaluación de la clase"
+        tildeOpcionalUno={false}
+        tildeOpcionalDos={false}
+        mensaje="https://wa.me/5491141631300?text=Hola,%20no%20sé%20tocar,%20comienzo%20desde%20cero%20y%20quiero%20hacer%20una%20clase%20de%20prueba.%20Me%20gustaría%20que%20me%20llames%20y%20conversar%20sobre%20las%20clases.%20¡Gracias!%20Mi%20nombre%20es:"
+      />
+
+      <CardPlanes
+        clases="4 clases"
+        descripcion="Mejor opción para tomar clases semanales con pago por adelantado"
+        precioSinDesc="48.000"
+        precioConDesc="38.000"
+        plan="4 clases"
+        objetivos="Plan de Estudio y Recomendaciones varias"
+        tildeOpcionalUno={true}
+        tildeOpcionalDos={true}
+        mensaje="https://wa.me/5491141631300?text=Hola,%20me%20gustaría%20comenzar%20con%20las%20clases%20y%20posiblemente%20tome%20el%20plan%20de%204%20clases.%20Quisiera%20que%20me%20llames%20y%20conversar%20sobre%20las%20clases.%20¡Gracias!%20Mi%20nombre%20es:"
+      />
+    </div>
+  </div>
+</section>
